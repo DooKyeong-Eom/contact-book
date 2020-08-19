@@ -13,7 +13,7 @@
             <u1>
                 <% contacts.forEach(function(contact) { %> <!-- contacts object에 forEach를 사용해서 코드를 반복해서 표시 -->
                     <li>
-                        <%= contact.name %>
+                      <a href="/contacts/<%= contact._id %>"><%= contact.name %></a><!-- 이름에 a tag를 추가하여 show action과 연결했음 -->
                     </li>  
                 <% }) %>
             </u1>
