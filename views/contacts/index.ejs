@@ -1,0 +1,22 @@
+<!-- views/contacts/index.ejs -->
+
+<!DOCTYPE html>
+<html>
+    <Head>
+        <%- include('../partials/head') %> <!-- <%- include %> 를 사용해서 외부 ejs(head)를 가져옴 -->
+    </Head>
+    <body>
+        <%- include('../partials/nav') %> <!-- <%- include %> 를 사용해서 외부 ejs(nav)를 가져옴 -->
+
+        <div class = "contact contact-index">
+            <h2>Index</h2>
+            <u1>
+                <% contacts.forEach(function(contact) { %> <!-- contacts object에 forEach를 사용해서 코드를 반복해서 표시 -->
+                    <li>
+                        <%= contact.name %>
+                    </li>  
+                <% }) %>
+            </u1>
+        </div>
+    </body>
+</html>
